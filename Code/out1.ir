@@ -1,0 +1,97 @@
+FUNCTION main :
+v1 := #10
+DEC v2 40
+v3 := #0
+v9 := #0
+LABEL label1 :
+IF v3 < #10 GOTO label2
+GOTO label3
+LABEL label2 :
+t9 := v3 * #4
+t10 := &v2 + t9
+READ t6
+*t10 := t6
+t12 := v3 + #1
+v3 := t12
+GOTO label1
+LABEL label3 :
+t16 := v1 / #2
+v4 := t16
+LABEL label4 :
+IF v4 >= #0 GOTO label5
+GOTO label6
+LABEL label5 :
+v9 := #0
+v3 := v4
+LABEL label7 :
+IF v9 == #0 GOTO label8
+GOTO label9
+LABEL label8 :
+v9 := #1
+t29 := v3 * #2
+t28 := t29 + #1
+v5 := t28
+t35 := v3 * #2
+t34 := t35 + #2
+v7 := t34
+IF v5 < v1 GOTO label10
+GOTO label11
+LABEL label10 :
+t45 := v5 * #4
+t46 := &v2 + t45
+v6 := *t46
+IF v7 < v1 GOTO label14
+GOTO label13
+LABEL label14 :
+t52 := v7 * #4
+t53 := &v2 + t52
+t57 := v5 * #4
+t58 := &v2 + t57
+t59 := *t53
+t60 := *t58
+IF t59 < t60 GOTO label12
+GOTO label13
+LABEL label12 :
+t65 := v7 * #4
+t66 := &v2 + t65
+v6 := *t66
+v5 := v7
+LABEL label13 :
+t72 := v3 * #4
+t73 := &v2 + t72
+IF *t73 > v6 GOTO label15
+GOTO label16
+LABEL label15 :
+v9 := #0
+t81 := v5 * #4
+t82 := &v2 + t81
+t85 := v3 * #4
+t86 := &v2 + t85
+t87 := *t86
+*t82 := t87
+t92 := v3 * #4
+t93 := &v2 + t92
+*t93 := v6
+v3 := v5
+LABEL label16 :
+LABEL label11 :
+GOTO label7
+LABEL label9 :
+t97 := v4 - #1
+v4 := t97
+GOTO label4
+LABEL label6 :
+v3 := #0
+LABEL label17 :
+IF v3 < v1 GOTO label18
+GOTO label19
+LABEL label18 :
+t108 := v3 * #4
+t109 := &v2 + t108
+t110 := *t109
+WRITE t110
+t112 := v3 + #1
+v3 := t112
+GOTO label17
+LABEL label19 :
+RETURN #0
